@@ -8,7 +8,11 @@ export default function Home() {
 
       <p>
         I have experience in system development, data integration, and web
-        applications. Feel free to explore my projects and services.
+        applications.
+      </p>
+
+      <p>
+        Feel free to explore my projects and services.
       </p>
 
     </div>
