@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Contact() {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thanks! Your message has been recorded (demo).");
+    navigate("/"); //to Home Page
   };
 
   return (
@@ -18,7 +23,10 @@ export default function Contact() {
 
           <div className="contactItem">
             <span className="contactLabel">Email</span>
-            <a className="contactValue" href="mailto:cchen199@my.centennialcollege.ca">
+            <a
+              className="contactValue"
+              href="mailto:cchen199@my.centennialcollege.ca"
+            >
               cchen199@my.centennialcollege.ca
             </a>
           </div>
@@ -60,7 +68,11 @@ export default function Contact() {
 
             <div className="field">
               <label>Message</label>
-              <textarea rows="5" placeholder="Write your message here..." required />
+              <textarea
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              />
             </div>
 
             <button className="btnPrimary" type="submit">
