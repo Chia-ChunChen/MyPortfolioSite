@@ -132,6 +132,24 @@ body {
   line-height: 1.7;
 }
 
+/* ===== Home ===== */
+.homeActions {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
 /* ===== About ===== */
 .aboutLayout {
   display: grid;
