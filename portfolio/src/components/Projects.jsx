@@ -16,6 +16,15 @@ export default function Projects() {
             Maintained and enhanced a Manufacturing Execution System for
             high-volume production, focusing on performance and reliability.
           </p>
+
+          <div className="projectSkills">
+            <span className="skillTag">C#</span>
+            <span className="skillTag">VB</span>
+            <span className="skillTag">.NET</span>
+            <span className="skillTag">SQL</span>
+            <span className="skillTag">Oracle</span>
+            <span className="skillTag">MES</span>
+          </div>
         </div>
 
         {/* Card 2 */}
@@ -26,16 +35,31 @@ export default function Projects() {
             Built analytics and visualization modules to identify trends,
             anomalies, and support root-cause insights.
           </p>
+
+          <div className="projectSkills">
+            <span className="skillTag">Regression</span>
+            <span className="skillTag">Clustering</span>
+            <span className="skillTag">Dimensionality Reduction</span>
+            <span className="skillTag">Visualization</span>
+          </div>
         </div>
 
         {/* Card 3 */}
         <div className="projectCard">
           <img src={aiImg} alt="AI Segmentation" className="projectImage" />
-          <h3>AI Image Segmentation & GAN System</h3>
+          <h3>AI-Driven Image Segmentation</h3>
           <p>
             Developed a PyTorch segmentation system and improved performance
             through GAN integration and analysis modules.
           </p>
+
+          <div className="projectSkills">
+            <span className="skillTag">Python</span>
+            <span className="skillTag">PyTorch</span>
+            <span className="skillTag">GAN</span>
+            <span className="skillTag">CNN</span>
+            <span className="skillTag">Deep Learning</span>
+          </div>
         </div>
       </div>
     </div>
