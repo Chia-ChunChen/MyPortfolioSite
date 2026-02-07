@@ -1,3 +1,5 @@
+import DataList from "./DataList";
+
 export default function Services() {
   const services = [
     {
@@ -27,7 +29,7 @@ export default function Services() {
     },
     {
       title: "Version Control",
-      items: ["Git","GitHub"],
+      items: ["Git", "GitHub"],
       icon: "🔄",
     },
   ];
@@ -39,9 +41,12 @@ export default function Services() {
         Here are the technical areas I can support based on my skills and project experience.
       </p>
 
-      <div className="servicesGrid">
-        {services.map((s) => (
-          <div className="serviceCard" key={s.title}>
+      <DataList
+        items={services}
+        className="servicesGrid"
+        getKey={(s) => s.title}
+        renderItem={(s) => (
+          <div className="serviceCard">
             <div className="serviceTop">
               <div className="serviceIcon">{s.icon}</div>
               <h3>{s.title}</h3>
@@ -52,11 +57,9 @@ export default function Services() {
                 <li key={it}>{it}</li>
               ))}
             </ul>
-
-            <p className="serviceNote">{s.note}</p>
           </div>
-        ))}
-      </div>
+        )}
+      />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import image_logo from "../assets/image_logo.jpg";
 
 export default function Layout() {
@@ -14,21 +14,21 @@ export default function Layout() {
         </div>
 
         <nav className="nav">
-          <NavLink to="/" end className="navLink">
+          <Link to="/" end className="navLink">
             Home
-          </NavLink>
-          <NavLink to="/about" className="navLink">
+          </Link>
+          <Link to="/about" className="navLink">
             About
-          </NavLink>
-          <NavLink to="/projects" className="navLink">
+          </Link>
+          <Link to="/projects" className="navLink">
             Projects
-          </NavLink>
-          <NavLink to="/services" className="navLink">
+          </Link>
+          <Link to="/services" className="navLink">
             Services
-          </NavLink>
-          <NavLink to="/contact" className="navLink">
+          </Link>
+          <Link to="/contact" className="navLink">
             Contact
-          </NavLink>
+          </Link>
         </nav>
       </div>
     </header>

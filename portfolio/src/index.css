@@ -60,11 +60,6 @@ body {
   transition: filter 250ms ease, transform 250ms ease;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 18px var(--primary-glow));
-  transform: translateY(-1px);
-}
-
 .title {
   margin: 0;
   font-size: 18px;
@@ -91,25 +86,6 @@ body {
   transition: color 200ms ease;
 }
 
-.navLink:hover {
-  color: var(--primary);
-}
-
-.navLink.active {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.navLink.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 2px;
-  background: var(--primary);
-  border-radius: 999px;
-}
 
 /* ===== Main content ===== */
 .main {
@@ -196,11 +172,7 @@ body {
   transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
 }
 
-.aboutResumeLink:hover {
-  background: var(--primary-light);
-  border-color: var(--primary);
-  color: var(--primary);
-}
+
 
 
 /* ===== Projects ===== */
@@ -219,10 +191,6 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.projectCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px var(--primary-glow);
-}
 
 .projectImage {
   width: 100%;
@@ -311,11 +279,6 @@ body {
   text-decoration: none;
 }
 
-.contactValue:hover {
-  color: var(--primary);
-}
-
-
 /* Form */
 .contactForm {
   display: grid;
@@ -364,10 +327,6 @@ body {
   font-weight: 600;
 }
 
-.btnPrimary:hover {
-  filter: brightness(0.98);
-}
-
 @media (max-width: 900px) {
   .contactGrid {
     grid-template-columns: 1fr;
@@ -393,11 +352,6 @@ body {
   border-radius: 20px;
   padding: 18px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.serviceCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(79, 140, 255, 0.16);
 }
 
 .serviceTop {

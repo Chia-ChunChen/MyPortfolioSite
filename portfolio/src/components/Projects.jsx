@@ -1,67 +1,60 @@
+import DataList from "./DataList";
 import mesImg from "../assets/project-mes.png";
 import fdcImg from "../assets/project-fdc.png";
 import aiImg from "../assets/project-ai.png";
 
 export default function Projects() {
+  const projects = [
+    {
+      title: "MES Enhancement",
+      image: mesImg,
+      alt: "MES Enhancement",
+      description:
+        "Maintained and enhanced a Manufacturing Execution System for high-volume production, focusing on performance and reliability.",
+      tags: ["C#", "VB", ".NET", "SQL", "Oracle", "MES"],
+    },
+    {
+      title: "Fault Detection & Classification (FDC)",
+      image: fdcImg,
+      alt: "FDC System",
+      description:
+        "Built analytics and visualization modules to identify trends, anomalies, and support root-cause insights.",
+      tags: ["Regression", "Clustering", "Dimensionality Reduction", "Visualization"],
+    },
+    {
+      title: "AI-Driven Image Segmentation",
+      image: aiImg,
+      alt: "AI Segmentation",
+      description:
+        "Developed a PyTorch segmentation system and improved performance through GAN integration and analysis modules.",
+      tags: ["Python", "PyTorch", "GAN", "CNN", "Deep Learning"],
+    },
+  ];
+
   return (
     <div className="page">
       <h2>Projects</h2>
 
-      <div className="projectsGrid">
-        {/* Card 1 */}
-        <div className="projectCard">
-          <img src={mesImg} alt="MES Enhancement" className="projectImage" />
-          <h3>MES Enhancement</h3>
-          <p>
-            Maintained and enhanced a Manufacturing Execution System for
-            high-volume production, focusing on performance and reliability.
-          </p>
+      <DataList
+        items={projects}
+        className="projectsGrid"
+        getKey={(p) => p.title}
+        renderItem={(p) => (
+          <div className="projectCard">
+            <img src={p.image} alt={p.alt} className="projectImage" />
+            <h3>{p.title}</h3>
+            <p>{p.description}</p>
 
-          <div className="projectSkills">
-            <span className="skillTag">C#</span>
-            <span className="skillTag">VB</span>
-            <span className="skillTag">.NET</span>
-            <span className="skillTag">SQL</span>
-            <span className="skillTag">Oracle</span>
-            <span className="skillTag">MES</span>
+            <div className="projectSkills">
+              {p.tags.map((t) => (
+                <span className="skillTag" key={t}>
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="projectCard">
-          <img src={fdcImg} alt="FDC System" className="projectImage" />
-          <h3>Fault Detection & Classification (FDC)</h3>
-          <p>
-            Built analytics and visualization modules to identify trends,
-            anomalies, and support root-cause insights.
-          </p>
-
-          <div className="projectSkills">
-            <span className="skillTag">Regression</span>
-            <span className="skillTag">Clustering</span>
-            <span className="skillTag">Dimensionality Reduction</span>
-            <span className="skillTag">Visualization</span>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="projectCard">
-          <img src={aiImg} alt="AI Segmentation" className="projectImage" />
-          <h3>AI-Driven Image Segmentation</h3>
-          <p>
-            Developed a PyTorch segmentation system and improved performance
-            through GAN integration and analysis modules.
-          </p>
-
-          <div className="projectSkills">
-            <span className="skillTag">Python</span>
-            <span className="skillTag">PyTorch</span>
-            <span className="skillTag">GAN</span>
-            <span className="skillTag">CNN</span>
-            <span className="skillTag">Deep Learning</span>
-          </div>
-        </div>
-      </div>
+        )}
+      />
     </div>
   );
 }
