@@ -17,8 +17,7 @@ export default function Home() {
       <p>
         Feel free to explore my projects and services.
       </p>
-
-      {/* go to about me */}
+      {/* go to about */}
       <div className="homeActions">
         <Link to="/about" className="btnPrimary">
           About Me
