@@ -1,10 +1,26 @@
+import { getToken } from "../components/auth/auth-helper";
+
 let apiURL = import.meta.env.VITE_APP_APIURL;
 const endpoint = "/api/users";
+
+const authHeaders = () => {
+  const token = getToken();
+  return token
+    ? {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      }
+    : {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      };
+};
 
 const list = async () => {
   try {
     const res = await fetch(`${apiURL}${endpoint}`, {
-      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      headers: authHeaders(),
     });
     return await res.json();
   } catch (e) {
@@ -16,7 +32,7 @@ const create = async (user) => {
   try {
     const res = await fetch(`${apiURL}${endpoint}`, {
       method: "POST",
-      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      headers: authHeaders(),
       body: JSON.stringify(user),
     });
     return await res.json();
@@ -29,7 +45,7 @@ const remove = async (id) => {
   try {
     const res = await fetch(`${apiURL}${endpoint}/${id}`, {
       method: "DELETE",
-      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      headers: authHeaders(),
     });
     return await res.json();
   } catch (e) {
@@ -41,7 +57,7 @@ const update = async (user, id) => {
   try {
     const res = await fetch(`${apiURL}${endpoint}/${id}`, {
       method: "PUT",
-      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      headers: authHeaders(),
       body: JSON.stringify(user),
     });
     return await res.json();
@@ -53,7 +69,7 @@ const update = async (user, id) => {
 const readOne = async (id) => {
   try {
     const res = await fetch(`${apiURL}${endpoint}/${id}`, {
-      headers: { Accept: "application/json", "Content-Type": "application/json" },
+      headers: authHeaders(),
     });
     return await res.json();
   } catch (e) {

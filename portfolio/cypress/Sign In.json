@@ -1,0 +1,243 @@
+{
+    "title": "Sign In",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 930,
+            "height": 673,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "navigate",
+            "url": "http://localhost:5173/",
+            "assertedEvents": [
+                {
+                    "type": "navigation",
+                    "url": "http://localhost:5173/",
+                    "title": "portfolio"
+                }
+            ]
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Sign In"
+                ],
+                [
+                    "a:nth-of-type(6)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/nav/a[6]"
+                ],
+                [
+                    "pierce/a:nth-of-type(6)"
+                ],
+                [
+                    "text/Sign In"
+                ]
+            ],
+            "offsetY": 14.75,
+            "offsetX": 32.0234375
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div:nth-of-type(1) > input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/section/div/form/div[1]/input"
+                ],
+                [
+                    "pierce/div:nth-of-type(1) > input"
+                ]
+            ],
+            "offsetY": 17.0625,
+            "offsetX": 202.5
+        },
+        {
+            "type": "change",
+            "value": "emma@test.ca",
+            "selectors": [
+                [
+                    "div:nth-of-type(1) > input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/section/div/form/div[1]/input"
+                ],
+                [
+                    "pierce/div:nth-of-type(1) > input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "div:nth-of-type(2) > input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/section/div/form/div[2]/input"
+                ],
+                [
+                    "pierce/div:nth-of-type(2) > input"
+                ]
+            ],
+            "offsetY": 30.5625,
+            "offsetX": 165.5
+        },
+        {
+            "type": "change",
+            "value": "test1234",
+            "selectors": [
+                [
+                    "div:nth-of-type(2) > input"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/section/div/form/div[2]/input"
+                ],
+                [
+                    "pierce/div:nth-of-type(2) > input"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Sign In[role=\"button\"]"
+                ],
+                [
+                    "button"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/main/section/div/form/button"
+                ],
+                [
+                    "pierce/button"
+                ]
+            ],
+            "offsetY": 15.5625,
+            "offsetX": 263.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Projects"
+                ],
+                [
+                    "nav > div a:nth-of-type(1)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/nav/div/div/a[1]"
+                ],
+                [
+                    "pierce/nav > div a:nth-of-type(1)"
+                ],
+                [
+                    "text/Projects"
+                ]
+            ],
+            "offsetY": 9.75,
+            "offsetX": 52.5546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Services"
+                ],
+                [
+                    "nav > div a:nth-of-type(2)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/nav/div/div/a[2]"
+                ],
+                [
+                    "pierce/nav > div a:nth-of-type(2)"
+                ],
+                [
+                    "text/Services"
+                ]
+            ],
+            "offsetY": 12.25,
+            "offsetX": 65.5546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/Users"
+                ],
+                [
+                    "nav > div a:nth-of-type(3)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/nav/div/div/a[3]"
+                ],
+                [
+                    "pierce/nav > div a:nth-of-type(3)"
+                ],
+                [
+                    "text/Users"
+                ]
+            ],
+            "offsetY": 2.75,
+            "offsetX": 63.5546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "aria/References"
+                ],
+                [
+                    "nav > div a:nth-of-type(4)"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div/nav/div/div/a[4]"
+                ],
+                [
+                    "pierce/nav > div a:nth-of-type(4)"
+                ],
+                [
+                    "text/References"
+                ]
+            ],
+            "offsetY": 18.25,
+            "offsetX": 69.5546875
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "header > div"
+                ],
+                [
+                    "xpath///*[@id=\"root\"]/div/header/div"
+                ],
+                [
+                    "pierce/header > div"
+                ]
+            ],
+            "offsetY": 112,
+            "offsetX": 795
+        }
+    ]
+}
